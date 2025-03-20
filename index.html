@@ -252,7 +252,7 @@
       </p>
 
       <div class="project-input-outer">
-        <input class="project-input" value="https://scratch.mit.edu/projects/" spellcheck="false" autocomplete="off">
+        <input class="project-input" value="Url Here" spellcheck="false" autocomplete="off">
         <script>
           // The script down below will take a bit to load. We have this separate script so the ID's input
           // will have the correct state immediately.
@@ -402,7 +402,7 @@
       const assetViewerNotSupported = document.querySelector('.asset-viewer-not-supported');
       const assetViewerOuter = document.querySelector('.asset-viewer-outer');
 
-      const SCRATCH_PREFIX = 'https://scratch.mit.edu/projects/';
+      const SCRATCH_PREFIX = '';
       const PROGRESS_STATE_WORKING = 'working';
       const PROGRESS_STATE_DONE = 'done';
       const PROGRESS_STATE_ERROR = 'error';
@@ -416,7 +416,7 @@
         replaceParameters(new URLSearchParams());
 
         const projectId = extractProjectId(e.target.value);
-        e.target.value = projectId ? `${SCRATCH_PREFIX}${projectId}` : SCRATCH_PREFIX;
+        e.target.value = projectId;
       });
       projectInput.addEventListener('focus', (e) => {
         const projectId = extractProjectId(e.target.value);
